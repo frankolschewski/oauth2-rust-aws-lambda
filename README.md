@@ -1,6 +1,17 @@
 # oauth2-rust-aws-lambda
 OAuth 2.0 Server implementation in Rust
 
+Dieses Projekt wird unter Windows mit Visual Studio Code entwickelt.
+
+## Special notes
+
+The OAuth client ID cannot contain ':' characters. Because of a limitation of the HTTP Basic Authentication Base64 encoding process.
+
+## Visual Studio Code setup
+
+Installed Extension: <br>
+rust-analyzer by rust-lang.org
+
 ## Installing Cargo Lambda
 
 See: [Cargo Lambda installation guide](https://www.cargo-lambda.info/guide/installation.html)
@@ -49,3 +60,10 @@ Restart the system to take the changed PATH variable into account.
     Creating shim for 'cargo-lambda'.
     'cargo-lambda' (1.0.0) was installed successfully!
     'zig' suggests installing 'extras/vcredist2022'.
+
+## Create Lambda with Cargo Lambda
+
+See: [Lambda Rust Runtime](https://github.com/awslabs/aws-lambda-rust-runtime)
+
+    > cd token
+    > cargo lambda new oauth_token
